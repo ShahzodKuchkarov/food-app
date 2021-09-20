@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter, BrowserRouter } from 'react-router-dom';
 import GlobalStyles from './style';
+import './i18next'
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalStyles />
-      <App />
+      <Suspense fallback={(<div>Loading~~~</div>)}>
+        <App />
+      </Suspense>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import colors from '../../style/colors';
 const { dark, red, gray } = colors;
 
-export default styled.header`
+let StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
@@ -18,6 +18,12 @@ export default styled.header`
     display: flex;
     flex-direction: column;
   }
+  .sidebar__links .lang {
+    width: 90px;
+    background-color: ${dark};
+    color: ${gray};
+    margin-left:10px;
+  } 
   .sidebar__links.settings {
     margin-top: auto;
   }
@@ -40,3 +46,5 @@ export default styled.header`
     }
   }
 `
+
+export default StyledHeader;

@@ -1,7 +1,9 @@
 import SignUp from './containers/Auth/SignUp';
-import Login from './containers/Auth/Login';
+import Login from './containers/Auth/Login11';
 import Home from './containers/Home';
 import Products from './containers/Products';
+import Add from './containers/Products/Add';
+import Edit from './containers/Products/Edit';
 
 const protectedURLs = [
   {
@@ -12,15 +14,21 @@ const protectedURLs = [
   },
   {
     path: '/products',
+    exact: true,
     component: Products,
     protected: true
   },
   {
-    path: '/',
+    path: `/products/edit/:id`,
     exact: true,
-    component: Home,
-    protected: true
+    component: Edit,
+    protected: true,
   },
+  {
+    path: '/products/add',
+    component: Add,
+    protected: true,
+  }
 ];
 
 const publicURLs = [

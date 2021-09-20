@@ -16,7 +16,6 @@ const Add = () => {
     image: '',
     rate: 0
   });
-
   const categories = [
     {
       name: "Salad",

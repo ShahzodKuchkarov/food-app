@@ -3,7 +3,7 @@ import { Redirect, Route } from "react-router-dom";
 
 export default function ProtectedRoutes(props) {
   const { component: Component, ...restProps } = props;
-  const token = 'dsdsds'
+  const token = localStorage.token;
   return (
     <Route
       {...restProps}

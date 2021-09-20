@@ -1,0 +1,68 @@
+{
+    "Home": {
+        "1": "Home"
+    },
+    "HotDrinks": {
+        "1": "Hot Drinks"
+    },
+    "Salads": {
+        "1": "Salads"
+    },
+    "Sandwiches": {
+        "1": "Sandwiches"
+    },
+    "Shakes": {
+        "1": "Shakes"
+    },
+    "Snacks": {
+        "1": "Snacks"
+    },
+    "SoftDrinks": {
+        "1": "Soft Drinks"
+    },
+    "Products": {
+        "1": "Products"
+    },
+    "Settings": {
+        "1": "Settings"
+    },
+    "SignOut": {
+        "1": "Sign Out"
+    },
+    "Language": {
+        "1": "Language"
+    },
+    "AllCategories": {
+        "1": "All Categories"
+    },
+    "Popular": {
+        "1": "Popular"
+    },
+    "BestSellers": {
+        "1": "Best Sellers"
+    },
+    "Favorites": {
+        "1": "Favorites"
+    },
+    "LastOrders": {
+        "1": "Last Orders"
+    },
+    "Search": {
+        "1": "Search anything, find everything"
+    },
+    "Lactose": {
+        "1": "Lactose"
+    },
+    "Vegan": {
+        "1": "Vegan"
+    },
+    "Gluten": {
+        "1": "Gluten Free"
+    },
+    "Off": {
+        "1": "50% off"
+    },
+    "AllSalads": {
+        "1": "All the salads"
+    }
+}

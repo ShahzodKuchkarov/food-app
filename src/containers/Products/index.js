@@ -30,7 +30,7 @@ export default function Products(props) {
   }, []);
 
   const goToNewProductPage = useCallback(() => {
-    history.push('/products/new');
+    history.push('/products/add');
   }, [history]);
 
   return (
