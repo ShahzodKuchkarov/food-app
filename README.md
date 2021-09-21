@@ -30,9 +30,6 @@ yarn run test
 
 👤 **AliCode academy**
 
-* Website: http://alisher.me
-* Github: [@alisher778](https://github.com/alisher778)
-* LinkedIn: [@alisher-musurmonov](https://linkedin.com/in/alisher-musurmonov)
 
 ## Show your support
 
