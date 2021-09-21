@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Carousel from './Carousel';
 import { FaCubes, BsFillHeartFill, GiRibbonMedal, AiFillStar, AiFillDatabase } from 'react-icons/all';
 import { Main } from '../../style/StyleHome';
@@ -6,6 +6,7 @@ import All from './All';
 import SwitchSelector from 'react-switch-selector';
 import { BsSearch } from 'react-icons/all';
 import { useTranslation } from 'react-i18next';
+import Axios from "../../utils/axios";
 
 export default function Index() {
 
@@ -17,8 +18,43 @@ export default function Index() {
   const [gluten, setGluten] = useState('');
 
 
+
+  /*   useEffect(() => {
+      Axios.get('/users')
+        .then(({ data }) => {
+          if (data.success) {
+            console.log(data)
+          }
+          else {
+            console.log(data);
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        })
+  
+  
+    }, [])
+   */
+
+
+
+
+
   const handleCLick = type => {
-    setTabName(type)
+    setTabName(type);
+    Axios.get('/users')
+      .then(({ data }) => {
+        if (data) {
+          console.log(data);
+        }
+        else {
+          console.log('error');
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
   };
   /* console.log(vegan) */
 

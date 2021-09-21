@@ -7,7 +7,6 @@ export default class index extends Component {
     gluten: false,
   }
 
-  // searchRef = React.createRef();
 
   handleChange = e => {
     const { value } = e.target;

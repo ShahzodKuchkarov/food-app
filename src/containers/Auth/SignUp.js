@@ -9,13 +9,8 @@ import Loader from '../../components/Loader'
 
 export default function SignUp() {
   const history = useHistory();
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
-
-  const handleInputChange = useCallback((e) => {
-    const { name, value } = e.target;
-    setValues(state => ({ ...state, [name]: value }));
-  }, []);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const [values, setValues] = useState({
     firstName: "",
@@ -23,14 +18,21 @@ export default function SignUp() {
     email: "",
     phone: "",
     password: "",
-  })
+    image: ""
+  });
+
+  const handleInputChange = useCallback((e) => {
+    const { name, value } = e.target;
+    setValues(state => ({ ...state, [name]: value }));
+  }, []);
+
   const handelSubmit = (e) => {
     e.preventDefault();
     setLoading(true)
     Axios.post('/auth/sign-up', values)
       .then(({ data }) => {
         if (data.success) {
-          console.log('success')
+          console.log('success', values)
           history.push('/login')
           setLoading(false)
         }
@@ -60,7 +62,8 @@ export default function SignUp() {
         <input placeholder="Email" onChange={handleInputChange} type="email" name="email" />
         <input placeholder="Phone number" onChange={handleInputChange} type="number" name="phone" />
         <input placeholder="Password" onChange={handleInputChange} required type="password" name="password" minlength="6" />
-        <button type="submit">Sign Up</button>
+        {/* <input type="text" name="image" /> */}
+        <button onChange={handleInputChange} type="submit">Sign Up</button>
         <div>
           Already have an account? <Link to="/login">Sign in</Link>
         </div>

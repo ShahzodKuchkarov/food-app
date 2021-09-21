@@ -19,6 +19,7 @@ export default function Header(props) {
   }
 
   const userData = JSON.parse(localStorage.getItem('userData'))
+  console.log(userData);
 
 
   return (
